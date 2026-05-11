@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Enes Cengiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<nav class="glass-nav">
+    <h2 class="logo shine-text">Portfolio</h2>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#edu-exp">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="admin/login.php" class="admin-link">⚙ Admin</a></li>
+    </ul>
+    <div class="theme-switch-wrapper">
+        <input type="checkbox" id="theme-toggle" class="theme-toggle-input" onchange="toggleTheme()">
+        <label for="theme-toggle" class="theme-toggle-label">
+            <span class="icon sun">☀️</span>
+            <span class="icon moon">🌙</span>
+            <span class="slider-ball"></span>
+        </label>
+    </div>
+</nav>
+
+<section id="home" class="section hero">
+    <div class="hero-content">
+        <div class="hero-badge">Hi there, I'm</div>
+        <h1 class="hero-title">Enes Cengiz</h1>
+        <p class="hero-subtitle"><span id="typing"></span><span class="cursor">|</span></p>
+        <div class="hero-actions">
+            <button class="gradient-btn" onclick="scrollToSection('projects')">View My Work</button>
+            <a href="#contact" class="outline-btn" onclick="scrollToSection('contact')">Let's Talk</a>
+        </div>
+    </div>
+    <div class="hero-glow"></div>
+</section>
+
+<section id="about" class="section">
+    <div class="section-header">
+        <h2 class="gradient-text">About Me</h2>
+    </div>
+    <div class="about-container">
+        <div class="about-card glass-panel">
+            <p>I am a 4th-year Computer Engineering (English) student at Haliç University with a strong passion for software development, computer vision, and modern web technologies.</p>
+            <p>With experience spanning Python, Java, C++, and modern web stacks, I enjoy architecting both individual and team-based solutions—ranging from facial emotion recognition systems to complex hospital automation platforms.</p>
+            <p>I continuously refine my skills in software engineering while actively contributing to student organizations and collaborative tech initiatives.</p>
+        </div>
+    </div>
+</section>
+
+<section id="edu-exp" class="section split-section-wrapper">
+    <div class="split-container">
+        <div class="half-width">
+            <h2 class="section-title gradient-text">Education</h2>
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-panel">
+                        <span class="date">2021 - Present</span>
+                        <h3>BSc Computer Engineering (English)</h3>
+                        <h4 class="company-name gradient-text">Haliç University</h4>
+                        <p>Focusing on software engineering principles, algorithms, and mobile/web application development.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-panel">
+                        <span class="date">2016 - 2021</span>
+                        <h3>High School</h3>
+                        <h4 class="company-name">İstek Kaşgarlı Mahmut Schools</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="half-width">
+            <h2 class="section-title gradient-text">Experience & Roles</h2>
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-panel">
+                        <span class="date">Jul 2024 - Oct 2024</span>
+                        <h3>Software Engineering Intern</h3>
+                        <h4 class="company-name gradient-text">Golden Gateway Software</h4>
+                        <p>Engineered software solutions and managed database architectures utilizing Python and Java ecosystems.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-panel">
+                        <span class="date">2021 - Present</span>
+                        <h3>Club Management Member</h3>
+                        <h4 class="company-name">Haliç University</h4>
+                        <p>Spearheaded event organization, student coordination, and technical project planning.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="skills" class="section">
+    <div class="section-header">
+        <h2 class="gradient-text">Technical Skills</h2>
+    </div>
+    <div class="bento-grid">
+        <div class="skill-category glass-panel">
+            <h3>Programming Languages</h3>
+            <div class="skill"><p>Python</p><div class="bar"><div class="fill" style="width:90%"></div></div></div>
+            <div class="skill"><p>Java</p><div class="bar"><div class="fill" style="width:85%"></div></div></div>
+            <div class="skill"><p>C / C++</p><div class="bar"><div class="fill" style="width:75%"></div></div></div>
+            <div class="skill"><p>PHP & JS</p><div class="bar"><div class="fill" style="width:80%"></div></div></div>
+        </div>
+        
+        <div class="skill-category glass-panel">
+            <h3>Software Development</h3>
+            <div class="skill"><p>System Architecture</p><div class="bar"><div class="fill" style="width:80%"></div></div></div>
+            <div class="skill"><p>API Design</p><div class="bar"><div class="fill" style="width:85%"></div></div></div>
+            <div class="skill"><p>OOP Principles</p><div class="bar"><div class="fill" style="width:90%"></div></div></div>
+            <div class="skill"><p>Agile / Scrum</p><div class="bar"><div class="fill" style="width:75%"></div></div></div>
+        </div>
+
+        <div class="skill-category glass-panel">
+            <h3>Tools & Databases</h3>
+            <div class="skill"><p>MySQL / SQLite</p><div class="bar"><div class="fill" style="width:85%"></div></div></div>
+            <div class="skill"><p>Git & GitHub</p><div class="bar"><div class="fill" style="width:88%"></div></div></div>
+            <div class="skill"><p>FastAPI</p><div class="bar"><div class="fill" style="width:75%"></div></div></div>
+            <div class="skill"><p>Mediapipe / OpenCV</p><div class="bar"><div class="fill" style="width:70%"></div></div></div>
+        </div>
+        
+        <div class="skill-category glass-panel">
+            <h3>Languages & Certs</h3>
+            <div class="skill"><p>English (B2)</p><div class="bar"><div class="fill" style="width:85%"></div></div></div>
+            <div class="skill"><p>German (A1)</p><div class="bar"><div class="fill" style="width:35%"></div></div></div>
+            <div class="cert-mini mt-3">
+                <!-- Sertifikalar Tıklanabilir Butonlara Çevrildi -->
+                <a href="Certificate of Appreciation.pdf" target="_blank" class="badge cert-btn">📄 Cert: Mobile Apps Impact (UTAS)</a>
+                <a href="Chain Talks.pdf" target="_blank" class="badge cert-btn">📄 Cert: Chain Talks</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="section">
+    <div class="section-header">
+        <h2 class="gradient-text">Projects</h2>
+        <p>A collection of software and computer vision projects I've built.</p>
+    </div>
+    <div id="projects-container" class="projects-container">
+        <div class="spinner"></div>
+    </div>
+</section>
+
+<section id="ai" class="section">
+    <div class="section-header">
+        <h2 class="gradient-text">Ask AI About Me</h2>
+    </div>
+    <div class="ai-box glass-panel">
+        <div class="ai-input-wrapper">
+            <input type="text" id="aiInput" placeholder="Try: 'What are Enes's skills?' or 'Tell me about his projects'...">
+            <button class="icon-btn" onclick="askAI()">→</button>
+        </div>
+        <div id="aiResponse" class="ai-response-area"></div>
+    </div>
+</section>
+
+<section id="contact" class="section">
+    <div class="section-header">
+        <h2 class="gradient-text">Contact Me</h2>
+    </div>
+    <div class="contact-container">
+        <form id="contact-form" class="contact-form glass-panel" novalidate>
+            <div class="input-group">
+                <input type="text" name="name" id="inp-name" placeholder="Name" autocomplete="off">
+                <span class="field-error" id="err-name"></span>
+            </div>
+            <div class="input-group">
+                <input type="email" name="email" id="inp-email" placeholder="Email" autocomplete="off">
+                <span class="field-error" id="err-email"></span>
+            </div>
+            <div class="input-group">
+                <textarea name="message" id="inp-message" placeholder="Your Message" rows="8"></textarea>
+                <span class="field-error" id="err-message"></span>
+            </div>
+            <button type="submit" class="gradient-btn full-width" id="submit-btn">Send Message</button>
+        </form>
+        <div class="contact-info glass-panel">
+            <h3>Digital Presence</h3>
+            <p class="contact-sub">Feel free to reach out for collaborations or just a friendly hello.</p>
+            <div class="social-links-grid">
+                <a href="cv.pdf" target="_blank" class="social-link">📄 Download CV</a>
+                <a href="https://www.linkedin.com/in/EnesCengix" target="_blank" class="social-link">💼 LinkedIn</a>
+                <a href="https://github.com/EnesCengix" target="_blank" class="social-link">💻 GitHub</a>
+                <a href="mailto:enescengiz@hotmail.com.tr" class="social-link">📧 Email</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<button id="scrollTopBtn" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script src="script.js"></script>
+</body>
+</html>
