@@ -92,7 +92,7 @@ function scrollToSection(id) {
     window.scrollTo({ top: el.offsetTop - navHeight, behavior: 'smooth' });
 }
 
-// ─── TOAST NOTIFICATION (Eski Koddan Eklendi) ─────────────
+// ─── TOAST NOTIFICATION  ─────────────
 function showToast(message, type = 'success') {
     const toast = document.getElementById('toast');
     toast.textContent = message;
@@ -100,7 +100,7 @@ function showToast(message, type = 'success') {
     setTimeout(() => { toast.className = 'toast'; }, 4000);
 }
 
-// ─── PROJECTS & API FALLBACK (Teknik altyapı korundu, yeni UI entegre edildi) ──
+// ─── PROJECTS & API FALLBACK ──
 const escapeHtml = (str) => String(str).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"\'":'&#39;'})[m]);
 
 const STATIC_PROJECTS = [
@@ -157,7 +157,7 @@ async function fetchProjects() {
 }
 fetchProjects();
 
-// ─── FORM VALIDATION & AJAX SUBMIT (Eski koddan korundu) ──
+// ─── FORM VALIDATION & AJAX SUBMIT ──
 function setError(id, message) {
     const inp = document.getElementById('inp-' + id);
     const err = document.getElementById('err-' + id);
